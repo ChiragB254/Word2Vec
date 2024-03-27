@@ -1,4 +1,4 @@
-**Word2Vec Implementation from Scratch**
+**Word2Vec Implementation from Scratch as well as using Gensim(Word2Vec library)**
 
 ---
 
@@ -26,15 +26,24 @@ Word2Vec operates through two fundamental architectures:
 
 In this repository, we illuminate the path of CBoW, shedding light on its intricacies and implementations.
 
-### Crafting the Implementation
+### Crafting the Implementation: An Example
 
-1. **Data Crafting**: Employing the sliding window algorithm to curate training data with target words and their contextual companions.
+Let's illustrate the concept with a simple example:
 
-2. **Neural Network Design**: We craft a neural network, a digital maestro, with a single fully connected layer to orchestrate the word prediction symphony.
+Consider the vocabulary: "hello linkedin connections let's talk".
 
-3. **Training Grounds**: Weights are fine-tuned using the melody of Backpropagation, harmonizing our model for optimal embeddings.
+Using a sliding window algorithm, we create training data. For instance, with a window size of three:
 
-## Embrace the Possibilities
+- For the phrase "hello linkedin connections":
+  - Target word: "linkedin"
+  - Context words: "hello" and "connections"
+- For the phrase "linkedin connections let's":
+  - Target word: "connections"
+  - Context words: "linkedin" and "let's"
+  
+We then encode these words into one-hot vectors and train a neural network to predict the target word from its context.
+
+### Embrace the Possibilities
 
 - CBoW dances gracefully with smaller datasets, rendering swift and precise results.
 - Skip-Gram, with its broad strokes, paints vivid semantic landscapes on larger canvases of data.
@@ -48,6 +57,8 @@ To embark on your Word2Vec odyssey, clone this repository, and immerse yourself 
 ![CBow_Word2Vec](https://github.com/ChiragB254/Word2Vec/assets/42599856/0fc4322d-41be-4225-82a7-e1e439808f2f)
 
 ![Skipgram_Word2Vec](https://github.com/ChiragB254/Word2Vec/assets/42599856/456e659a-103d-433b-845e-f5a04c0610cd)
+
+---
 
 
 
